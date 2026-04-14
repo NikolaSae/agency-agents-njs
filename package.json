@@ -1,0 +1,27 @@
+{
+  "name": "agency-agents-njs",
+  "version": "1.0.0",
+  "description": "> **A complete AI agency at your fingertips** - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
+  "main": "capture.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikolaSae/agency-agents-njs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NikolaSae/agency-agents-njs/issues"
+  },
+  "homepage": "https://github.com/NikolaSae/agency-agents-njs#readme",
+  "dependencies": {
+    "playwright": "^1.59.1"
+  }
+}

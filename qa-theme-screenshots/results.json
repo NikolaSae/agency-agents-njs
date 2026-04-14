@@ -1,0 +1,39 @@
+{
+  "darkResult": {
+    "scheme": "dark",
+    "htmlClassDark": true,
+    "sunHidden": true,
+    "moonHidden": true,
+    "systemHidden": false
+  },
+  "lightResult": {
+    "scheme": "light",
+    "htmlClassDark": false,
+    "sunHidden": true,
+    "moonHidden": true,
+    "systemHidden": false
+  },
+  "cycle": [
+    {
+      "htmlClassDark": true,
+      "currentTheme": "system",
+      "sunHidden": true,
+      "moonHidden": true,
+      "systemHidden": false
+    },
+    {
+      "htmlClassDark": false,
+      "currentTheme": "light",
+      "sunHidden": false,
+      "moonHidden": true,
+      "systemHidden": true
+    },
+    {
+      "htmlClassDark": true,
+      "currentTheme": "dark",
+      "sunHidden": true,
+      "moonHidden": false,
+      "systemHidden": true
+    }
+  ]
+}

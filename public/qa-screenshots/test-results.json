@@ -1,0 +1,33 @@
+{
+  "timestamp": "2024-04-14T09:35:00Z",
+  "url": "http://localhost:8000/hero-section.html",
+  "deviceTests": {
+    "desktop": {
+      "resolution": "1920x1080",
+      "status": "TESTED",
+      "screenshot": "hero-section-screenshot.png"
+    },
+    "tablet": {
+      "resolution": "768x1024",
+      "status": "NOT_TESTED"
+    },
+    "mobile": {
+      "resolution": "375x667",
+      "status": "NOT_TESTED"
+    }
+  },
+  "interactiveElements": {
+    "accordion": "NOT_PRESENT",
+    "form": "NOT_PRESENT",
+    "navigation": "NOT_PRESENT",
+    "themeToggle": "NOT_PRESENT"
+  },
+  "performance": {
+    "loadTime": "0.1s",
+    "size": "842 bytes"
+  },
+  "accessibility": {
+    "contrast": "PASS",
+    "altText": "NOT_APPLICABLE"
+  }
+}

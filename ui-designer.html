@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Designer Agent</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            boxShadow: {
+              soft: '0 20px 60px rgba(15, 23, 42, 0.08)',
+            },
+            colors: {
+              brand: {
+                500: '#5c6ac4',
+                600: '#4f57b0',
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      .theme-icon {
+        width: 1.35rem;
+        height: 1.35rem;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+    <div class="min-h-screen px-4 py-6 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <header class="mb-8 flex flex-col gap-6 rounded-3xl border border-slate-200/80 bg-white/90 p-6 shadow-soft backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-900/80">
+          <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-[0.3em] text-brand-600 dark:text-brand-400">UI Designer Agent</p>
+              <h1 class="mt-4 text-3xl font-semibold sm:text-4xl">🎨 UI Designer</h1>
+              <p class="mt-3 max-w-2xl text-slate-600 dark:text-slate-300">Expert UI designer specializing in visual design systems, component libraries, and pixel-perfect interface creation. Creates beautiful, consistent, accessible user interfaces that enhance UX and reflect brand identity.</p>
+            </div>
+            <button id="theme-toggle" aria-label="Toggle theme" class="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200/90 bg-slate-100 px-4 py-3 text-sm font-medium text-slate-700 shadow-sm transition hover:border-slate-300 hover:bg-slate-200 dark:border-slate-700/90 dark:bg-slate-800 dark:text-slate-100 dark:hover:border-slate-600">
+              <svg class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path id="theme-sun" class="hidden" d="M12 3v2M12 19v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42M12 7a5 5 0 100 10 5 5 0 000-10z" />
+                <path id="theme-moon" d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" />
+              </svg>
+              <span id="theme-label">Dark mode</span>
+            </button>
+          </div>
+          <nav class="flex flex-wrap gap-2">
+            <a href="index.html" class="rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700">Dashboard</a>
+            <a href="departments.html" class="rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700">Odeljenja</a>
+            <a href="agents.html" class="rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700">Svi agenti</a>
+            <a href="design.html" class="rounded-full bg-brand-600 px-4 py-2 text-sm font-medium text-white">Design</a>
+          </nav>
+        </header>
+
+        <main class="grid gap-8 lg:grid-cols-[2fr_1fr]">
+          <section class="space-y-8">
+            <div class="rounded-3xl border border-slate-200/80 bg-white/90 p-6 shadow-soft backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-900/80">
+              <h2 class="mb-4 text-2xl font-semibold">O agentu</h2>
+              <p class="mb-6 text-slate-600 dark:text-slate-300">Ja sam UI Designer agent, stručnjak za vizuelne dizajn sisteme i kreiranje pixel-perfect interfejsa. Specijalizovan sam za komponentne biblioteke, dizajn sisteme i kreiranje lepih, konzistentnih i pristupačnih korisničkih interfejsa koji poboljšavaju UX i odražavaju brend identitet.</p>
+
+              <div class="grid gap-4 md:grid-cols-2">
+                <div class="rounded-3xl bg-slate-50 p-4 dark:bg-slate-950">
+                  <h3 class="mb-3 font-semibold text-slate-900 dark:text-slate-100">Ključne veštine</h3>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="rounded-full bg-purple-100 px-3 py-1 text-sm font-medium text-purple-700 dark:bg-purple-500/20 dark:text-purple-300">Figma</span>
+                    <span class="rounded-full bg-purple-100 px-3 py-1 text-sm font-medium text-purple-700 dark:bg-purple-500/20 dark:text-purple-300">Sketch</span>
+                    <span class="rounded-full bg-purple-100 px-3 py-1 text-sm font-medium text-purple-700 dark:bg-purple-500/20 dark:text-purple-300">Design Systems</span>
+                    <span class="rounded-full bg-purple-100 px-3 py-1 text-sm font-medium text-purple-700 dark:bg-purple-500/20 dark:text-purple-300">Component Libraries</span>
+                    <span class="rounded-full bg-purple-100 px-3 py-1 text-sm font-medium text-purple-700 dark:bg-purple-500/20 dark:text-purple-300">Accessibility</span>
+                    <span class="rounded-full bg-purple-100 px-3 py-1 text-sm font-medium text-purple-700 dark:bg-purple-500/20 dark:text-purple-300">Prototyping</span>
+                  </div>
+                </div>
+
+                <div class="rounded-3xl bg-slate-50 p-4 dark:bg-slate-950">
+                  <h3 class="mb-3 font-semibold text-slate-900 dark:text-slate-100">Status</h3>
+                  <div class="space-y-2 text-sm">
+                    <div class="flex items-center justify-between">
+                      <span class="text-slate-600 dark:text-slate-400">Trenutni status:</span>
+                      <span class="rounded-full bg-emerald-100 px-2 py-1 font-semibold text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300">Online</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <span class="text-slate-600 dark:text-slate-400">Aktivni projekti:</span>
+                      <span class="font-semibold text-slate-900 dark:text-slate-100">2</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <span class="text-slate-600 dark:text-slate-400">Response time:</span>
+                      <span class="font-semibold text-slate-900 dark:text-slate-100">&lt; 3min</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-3xl border border-slate-200/80 bg-white/90 p-6 shadow-soft backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-900/80">
+              <h2 class="mb-4 text-2xl font-semibold">Šta radim</h2>
+              <div class="space-y-6">
+                <div class="flex gap-4">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-purple-100 dark:bg-purple-500/20">
+                    <span class="text-lg">🎯</span>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-slate-900 dark:text-slate-100">Design Systems</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">Kreiram konzistentne dizajn sisteme sa komponentnim bibliotekama, stilskim vodičima i pattern bibliotekama.</p>
+                  </div>
+                </div>
+
+                <div class="flex gap-4">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-purple-100 dark:bg-purple-500/20">
+                    <span class="text-lg">✨</span>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-slate-900 dark:text-slate-100">Pixel-Perfect Interfaces</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">Dizajniram pixel-perfect interfejse sa pažnjom na detalje, spacing, typography i vizuelnu hijerarhiju.</p>
+                  </div>
+                </div>
+
+                <div class="flex gap-4">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-purple-100 dark:bg-purple-500/20">
+                    <span class="text-lg">♿</span>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-slate-900 dark:text-slate-100">Accessibility Design</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">Implementiram WCAG standarde za pristupačnost, osiguravajući da dizajni budu inkluzivni za sve korisnike.</p>
+                  </div>
+                </div>
+
+                <div class="flex gap-4">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-purple-100 dark:bg-purple-500/20">
+                    <span class="text-lg">🔄</span>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-slate-900 dark:text-slate-100">Prototyping & Testing</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300">Kreiram interaktivne prototipove i vodim user testing sesije za validaciju dizajna.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-3xl border border-slate-200/80 bg-white/90 p-6 shadow-soft backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-900/80">
+              <h2 class="mb-4 text-2xl font-semibold">Nedavni projekti</h2>
+              <div class="space-y-4">
+                <article class="rounded-3xl border border-slate-200/80 bg-slate-50 p-4 dark:border-slate-800/80 dark:bg-slate-950">
+                  <div class="flex items-start justify-between gap-4 mb-3">
+                    <div>
+                      <h3 class="font-semibold text-slate-900 dark:text-slate-100">FinTech Dashboard</h3>
+                      <p class="text-sm text-slate-600 dark:text-slate-400">Kompletan dizajn sistem za finansijsku aplikaciju sa 50+ komponentama</p>
+                    </div>
+                    <span class="rounded-full bg-emerald-100 px-2 py-1 text-xs font-semibold text-emerald-700 dark:bg-emerald-500/20 dark:text-emerald-300">Completed</span>
+                  </div>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="rounded-full bg-purple-100 px-2 py-1 text-xs font-medium text-purple-700 dark:bg-purple-500/20 dark:text-purple-300">Figma</span>
+                    <span class="rounded-full bg-purple-100 px-2 py-1 text-xs font-medium text-purple-700 dark:bg-purple-500/20 dark:text-purple-300">Design System</span>
+                    <span class="rounded-full bg-purple-100 px-2 py-1 text-xs font-medium text-purple-700 dark:bg-purple-500/20 dark:text-purple-300">Accessibility</span>
+                  </div>
+                </article>
+
+                <article class="rounded-3xl border border-slate-200/80 bg-slate-50 p-4 dark:border-slate-800/80 dark:bg-slate-950">
+                  <div class="flex items-start justify-between gap-4 mb-3">
+                    <div>
+                      <h3 class="font-semibold text-slate-900 dark:text-slate-100">E-commerce Platform</h3>
+                      <p class="text-sm text-slate-600 dark:text-slate-400">Redizajn korisničkog interfejsa sa fokusom na konverziju i UX</p>
+                    </div>
+                    <span class="rounded-full bg-sky-100 px-2 py-1 text-xs font-semibold text-sky-700 dark:bg-sky-500/20 dark:text-sky-300">In Progress</span>
+                  </div>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="rounded-full bg-purple-100 px-2 py-1 text-xs font-medium text-purple-700 dark:bg-purple-500/20 dark:text-purple-300">User Research</span>
+                    <span class="rounded-full bg-purple-100 px-2 py-1 text-xs font-medium text-purple-700 dark:bg-purple-500/20 dark:text-purple-300">Prototyping</span>
+                    <span class="rounded-full bg-purple-100 px-2 py-1 text-xs font-medium text-purple-700 dark:bg-purple-500/20 dark:text-purple-300">A/B Testing</span>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <aside class="space-y-6">
+            <div class="rounded-3xl border border-slate-200/80 bg-white/90 p-6 shadow-soft backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-900/80">
+              <h3 class="mb-4 font-semibold text-slate-900 dark:text-slate-100">Kontakt</h3>
+              <div class="space-y-3 text-sm">
+                <div class="flex items-center gap-3">
+                  <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-purple-100 dark:bg-purple-500/20">
+                    <span class="text-sm">💬</span>
+                  </div>
+                  <div>
+                    <p class="font-medium text-slate-900 dark:text-slate-100">Direct Message</p>
+                    <p class="text-slate-600 dark:text-slate-400">Response in &lt; 3min</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-purple-100 dark:bg-purple-500/20">
+                    <span class="text-sm">📋</span>
+                  </div>
+                  <div>
+                    <p class="font-medium text-slate-900 dark:text-slate-100">Design Brief</p>
+                    <p class="text-slate-600 dark:text-slate-400">Send requirements</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-3xl border border-slate-200/80 bg-white/90 p-6 shadow-soft backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-900/80">
+              <h3 class="mb-4 font-semibold text-slate-900 dark:text-slate-100">Statistike</h3>
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-slate-600 dark:text-slate-400">Projekata završeno</span>
+                  <span class="font-semibold text-slate-900 dark:text-slate-100">32</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-slate-600 dark:text-slate-400">Komponenti dizajnirano</span>
+                  <span class="font-semibold text-slate-900 dark:text-slate-100">1,247</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-slate-600 dark:text-slate-400">Kupaca zadovoljno</span>
+                  <span class="font-semibold text-slate-900 dark:text-slate-100">96%</span>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-slate-600 dark:text-slate-400">Avg. delivery time</span>
+                  <span class="font-semibold text-slate-900 dark:text-slate-100">7 days</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-3xl border border-slate-200/80 bg-white/90 p-6 shadow-soft backdrop-blur-xl dark:border-slate-800/80 dark:bg-slate-900/80">
+              <h3 class="mb-4 font-semibold text-slate-900 dark:text-slate-100">Alati</h3>
+              <div class="grid grid-cols-3 gap-3">
+                <div class="flex flex-col items-center gap-2 rounded-2xl bg-slate-50 p-3 dark:bg-slate-950">
+                  <span class="text-2xl">🎨</span>
+                  <span class="text-xs font-medium text-slate-700 dark:text-slate-300">Figma</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 rounded-2xl bg-slate-50 p-3 dark:bg-slate-950">
+                  <span class="text-2xl">✏️</span>
+                  <span class="text-xs font-medium text-slate-700 dark:text-slate-300">Sketch</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 rounded-2xl bg-slate-50 p-3 dark:bg-slate-950">
+                  <span class="text-2xl">📐</span>
+                  <span class="text-xs font-medium text-slate-700 dark:text-slate-300">InVision</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 rounded-2xl bg-slate-50 p-3 dark:bg-slate-950">
+                  <span class="text-2xl">🎯</span>
+                  <span class="text-xs font-medium text-slate-700 dark:text-slate-300">Principle</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 rounded-2xl bg-slate-50 p-3 dark:bg-slate-950">
+                  <span class="text-2xl">🔍</span>
+                  <span class="text-xs font-medium text-slate-700 dark:text-slate-300">Maze</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 rounded-2xl bg-slate-50 p-3 dark:bg-slate-950">
+                  <span class="text-2xl">📊</span>
+                  <span class="text-xs font-medium text-slate-700 dark:text-slate-300">Hotjar</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </main>
+      </div>
+    </div>
+
+    <script>
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeLabel = document.getElementById('theme-label');
+      const sunIcon = document.getElementById('theme-sun');
+      const moonIcon = document.getElementById('theme-moon');
+
+      function setTheme(theme) {
+        const root = document.documentElement;
+        if (theme === 'dark') {
+          root.classList.add('dark');
+          themeLabel.textContent = 'Light mode';
+          sunIcon.classList.remove('hidden');
+          moonIcon.classList.add('hidden');
+        } else {
+          root.classList.remove('dark');
+          themeLabel.textContent = 'Dark mode';
+          moonIcon.classList.remove('hidden');
+          sunIcon.classList.add('hidden');
+        }
+      }
+
+      const savedTheme = localStorage.getItem('dashboard-theme');
+      setTheme(savedTheme === 'dark' ? 'dark' : 'light');
+
+      themeToggle.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.contains('dark');
+        const nextTheme = isDark ? 'light' : 'dark';
+        setTheme(nextTheme);
+        localStorage.setItem('dashboard-theme', nextTheme);
+      });
+    </script>
+  </body>
+</html>

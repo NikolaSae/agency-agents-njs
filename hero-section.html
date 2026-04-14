@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 text-slate-900 dark:text-slate-100 min-h-screen transition-colors duration-300">
+    <section class="hero-section relative flex min-h-screen items-center justify-center overflow-hidden px-6 py-12">
+        <div class="pointer-events-none absolute inset-x-0 top-0 h-80 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.14),transparent_46%)]" aria-hidden="true"></div>
+        <div class="pointer-events-none absolute -right-16 bottom-16 h-72 w-72 rounded-full bg-gradient-to-br from-purple-400/30 to-blue-400/10 blur-3xl" aria-hidden="true"></div>
+        <div class="pointer-events-none absolute left-10 bottom-10 h-44 w-44 rounded-full bg-gradient-to-br from-sky-300/20 to-transparent blur-3xl" aria-hidden="true"></div>
+
+        <!-- Dark/Light Mode Toggle -->
+        <button id="theme-toggle" class="absolute top-6 right-6 inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/90 p-2 shadow-lg shadow-slate-200/50 transition-all duration-300 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900/80 dark:shadow-none focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Toggle theme">
+            <svg id="sun-icon" class="w-6 h-6 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
+            </svg>
+            <svg id="moon-icon" class="w-6 h-6 text-slate-500 dark:text-cyan-300 hidden" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+            </svg>
+            <svg id="system-icon" class="w-6 h-6 text-slate-600 dark:text-slate-400 hidden" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M2 5a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2h-3v2h1a1 1 0 110 2H8a1 1 0 110-2h1v-2H4a2 2 0 01-2-2V5zm3 0v8h10V5H5z" clip-rule="evenodd" />
+            </svg>
+            <span id="theme-label" class="sr-only">Current theme: system</span>
+        </button>
+
+        <div class="relative z-10 w-full max-w-4xl rounded-[2rem] border border-white/80 bg-white/85 p-8 shadow-2xl shadow-slate-900/10 backdrop-blur-xl transition-colors duration-300 dark:border-slate-700/70 dark:bg-slate-950/75">
+            <div class="text-center">
+                <span class="inline-flex rounded-full bg-slate-100 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-slate-600 dark:bg-slate-800 dark:text-slate-300">
+                    AI-driven digital craftsmanship
+                </span>
+                <h1 class="mt-8 text-5xl font-extrabold leading-tight tracking-tight text-slate-950 dark:text-white md:text-6xl lg:text-7xl">
+                    Nikola Sae
+                </h1>
+                <p class="mt-6 text-xl font-semibold text-slate-700 dark:text-slate-300 md:text-2xl">
+                    Full-Stack Developer & AI Agent Builder
+                </p>
+                <p class="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-600 dark:text-slate-300 sm:text-lg">
+                    Gradim stvari koje rade same — elegantne, efikasne i prilagođene stvarnom svetu. Moderni proizvodi sa jasnom porukom i besprekornim korisničkim iskustvom.
+                </p>
+                <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                    <a href="#" class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 text-base font-semibold text-white shadow-xl shadow-blue-600/20 transition duration-300 hover:-translate-y-0.5 hover:shadow-blue-500/30 focus:outline-none focus:ring-4 focus:ring-blue-300/30">
+                        Pogledaj moje agente
+                    </a>
+                    <a href="#" class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-8 py-4 text-base font-semibold text-slate-700 transition duration-300 hover:border-slate-300 hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-200 dark:hover:border-slate-600 dark:hover:bg-slate-800">
+                        Kontaktiraj me
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-12 grid gap-4 sm:grid-cols-3">
+                <div class="rounded-3xl border border-slate-200 bg-slate-50/80 px-5 py-4 text-left shadow-sm dark:border-slate-700/60 dark:bg-slate-900/70">
+                    <p class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">Brza izvedba</p>
+                    <p class="mt-3 text-2xl font-bold text-slate-950 dark:text-white">Lightning-fast</p>
+                </div>
+                <div class="rounded-3xl border border-slate-200 bg-slate-50/80 px-5 py-4 text-left shadow-sm dark:border-slate-700/60 dark:bg-slate-900/70">
+                    <p class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">Pametni sistemi</p>
+                    <p class="mt-3 text-2xl font-bold text-slate-950 dark:text-white">AI-first</p>
+                </div>
+                <div class="rounded-3xl border border-slate-200 bg-slate-50/80 px-5 py-4 text-left shadow-sm dark:border-slate-700/60 dark:bg-slate-900/70">
+                    <p class="text-sm font-semibold uppercase tracking-[0.25em] text-slate-500 dark:text-slate-400">Minimalni dizajn</p>
+                    <p class="mt-3 text-2xl font-bold text-slate-950 dark:text-white">Elegantan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+        const systemIcon = document.getElementById('system-icon');
+        const themeLabel = document.getElementById('theme-label');
+        const html = document.documentElement;
+
+        // System theme preference detection
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        
+        // Get current theme preference
+        let currentTheme = localStorage.getItem('theme') || 'system';
+        
+        // Function to apply theme
+        function applyTheme(theme) {
+            const systemPrefersDark = mediaQuery.matches;
+            if (theme === 'system') {
+                html.classList.toggle('dark', systemPrefersDark);
+            } else {
+                html.classList.toggle('dark', theme === 'dark');
+            }
+            
+            // Update icons
+            sunIcon.classList.toggle('hidden', theme !== 'light');
+            moonIcon.classList.toggle('hidden', theme !== 'dark');
+            systemIcon.classList.toggle('hidden', theme !== 'system');
+
+            // Update accessible text
+            themeToggle.setAttribute('aria-label', 'Toggle theme');
+            themeLabel.textContent = 'Current theme: ' + (theme === 'system' ? (systemPrefersDark ? 'dark (system)' : 'light (system)') : theme);
+        }
+        
+        // Initialize theme
+        applyTheme(currentTheme);
+        
+        // Listen for system theme changes when in system mode
+        mediaQuery.addEventListener('change', (e) => {
+            if (currentTheme === 'system') {
+                applyTheme('system');
+            }
+        });
+        
+        // Theme toggle handler
+        themeToggle.addEventListener('click', () => {
+            // Cycle through themes: light -> dark -> system -> light...
+            if (currentTheme === 'light') {
+                currentTheme = 'dark';
+            } else if (currentTheme === 'dark') {
+                currentTheme = 'system';
+            } else {
+                currentTheme = 'light';
+            }
+            
+            localStorage.setItem('theme', currentTheme);
+            applyTheme(currentTheme);
+        });
+    </script>
+</body>
+</html></content>
+<parameter name="filePath">/workspaces/agency-agents-njs/hero-section.html
