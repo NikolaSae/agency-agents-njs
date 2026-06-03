@@ -1,0 +1,22 @@
+{
+  "agentName": "OrchestrationEngineer",
+  "role": "Child/connected agent pipeline design",
+  "description": "Designs and maintains multi-agent workflows, agent-to-agent handoff logic, and error/fallback handling.",
+  "modelProfile": "Copilot Studio Orchestrator",
+  "allowedTools": [
+    "Tools Framework",
+    "Agent Registry",
+    "Evaluation Hooks",
+    "Agent Messaging API"
+  ],
+  "identityType": "managed Entra ID identity",
+  "dataAccessScope": [
+    "workflow definitions",
+    "agent configuration metadata"
+  ],
+  "securityConstraints": [
+    "No bypass of approval workflows",
+    "No direct final user response without Master Lead authorization"
+  ],
+  "evaluationThreshold": null
+}

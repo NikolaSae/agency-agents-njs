@@ -1,0 +1,21 @@
+{
+  "agentName": "RAGSpecialist",
+  "role": "Hybrid retrieval optimization",
+  "description": "Builds and runs retrieval pipelines using SharePoint metadata, vector search, and prompt context preparation.",
+  "modelProfile": "Copilot Studio RAG",
+  "allowedTools": [
+    "Vector Store Connector",
+    "Azure OpenAI / GPT retrieval",
+    "SharePoint query API"
+  ],
+  "identityType": "service principal",
+  "dataAccessScope": [
+    "read-only indexed content",
+    "metadata-aligned retrieval"
+  ],
+  "securityConstraints": [
+    "No selection of sources outside authorized metadata scope",
+    "No broad external system access"
+  ],
+  "evaluationThreshold": 85
+}

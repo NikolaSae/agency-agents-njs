@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SharePoint Content Type Definitions",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Content type name."
+      },
+      "parent": {
+        "type": "string",
+        "description": "Parent content type in SharePoint hierarchy."
+      },
+      "fields": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "description": {
+        "type": "string"
+      }
+    },
+    "required": ["name", "parent", "fields"]
+  },
+  "examples": [
+    {
+      "name": "AgentKnowledgeItem",
+      "parent": "Document",
+      "fields": [
+        "BusinessUnit",
+        "KnowledgeDomain",
+        "ContentType",
+        "SourceSystem",
+        "SensitivityLabel",
+        "RetentionLabel",
+        "RAGPriority",
+        "Language",
+        "EffectiveDate",
+        "ApprovedBy",
+        "Summary"
+      ],
+      "description": "Generic knowledge item used as a RAG source."
+    },
+    {
+      "name": "PolicyDocument",
+      "parent": "Document",
+      "fields": [
+        "BusinessUnit",
+        "KnowledgeDomain",
+        "SensitivityLabel",
+        "RetentionLabel",
+        "RAGPriority",
+        "EffectiveDate",
+        "ApprovedBy",
+        "PolicyOwner",
+        "ReviewCycle"
+      ],
+      "description": "Formal policy or regulation document."
+    }
+  ]
+}

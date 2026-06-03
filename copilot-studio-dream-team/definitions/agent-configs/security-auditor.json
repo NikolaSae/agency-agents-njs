@@ -1,0 +1,22 @@
+{
+  "agentName": "SecurityAuditor",
+  "role": "DLP, sensitivity, and audit review",
+  "description": "Reviews high-risk outputs, validates sensitivity labels, and approves or rejects responses for sensitive content.",
+  "modelProfile": "Copilot Studio Security",
+  "allowedTools": [
+    "Microsoft Purview API",
+    "DLP Scanner",
+    "Audit Log Access"
+  ],
+  "identityType": "managed Entra ID identity",
+  "dataAccessScope": [
+    "sensitive content metadata",
+    "audit logs",
+    "policy approval records"
+  ],
+  "securityConstraints": [
+    "No final user-facing answer generation without explicit approval",
+    "No modification of production knowledge content"
+  ],
+  "evaluationThreshold": 100
+}

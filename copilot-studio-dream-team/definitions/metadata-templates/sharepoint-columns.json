@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SharePoint Column Definitions",
+  "type": "object",
+  "properties": {
+    "BusinessUnit": {
+      "type": "string",
+      "description": "Primary business area for the content.",
+      "enum": ["Finance", "HR", "Legal", "Sales", "IT", "Operations"]
+    },
+    "KnowledgeDomain": {
+      "type": "string",
+      "description": "Managed metadata term for domain classification.",
+      "examples": ["mCommerce", "mParking", "ContractManagement", "RegulatoryCompliance"]
+    },
+    "ContentType": {
+      "type": "string",
+      "description": "Document role in the knowledge model.",
+      "enum": ["Policy", "Runbook", "FAQ", "Procedure", "Contract"]
+    },
+    "SourceSystem": {
+      "type": "string",
+      "description": "Original source system of the content.",
+      "examples": ["SharePoint", "ERP", "CRM", "Teams", "External"]
+    },
+    "SensitivityLabel": {
+      "type": "string",
+      "description": "Sensitivity level used by Purview and DLP.",
+      "enum": ["Public", "Internal", "Confidential", "Highly Confidential"]
+    },
+    "RetentionLabel": {
+      "type": "string",
+      "description": "Retention classification for the document.",
+      "enum": ["1 year", "3 years", "7 years", "Permanent"]
+    },
+    "RAGPriority": {
+      "type": "string",
+      "description": "Retrieval priority in the RAG pipeline.",
+      "enum": ["High", "Normal", "Low"]
+    },
+    "Language": {
+      "type": "string",
+      "description": "Language code for the content.",
+      "enum": ["en-US", "local"]
+    },
+    "EffectiveDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date used to assess content freshness."
+    },
+    "ApprovedBy": {
+      "type": "string",
+      "description": "Person or group responsible for approving the content."
+    }
+  },
+  "required": ["BusinessUnit", "KnowledgeDomain", "ContentType", "SensitivityLabel", "RetentionLabel", "RAGPriority", "Language"]
+}

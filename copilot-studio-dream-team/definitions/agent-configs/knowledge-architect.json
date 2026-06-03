@@ -1,0 +1,23 @@
+{
+  "agentName": "KnowledgeArchitect",
+  "role": "SharePoint metadata and content model design",
+  "description": "Defines taxonomy, metadata columns, content types, and knowledge boundaries for Copilot Studio.",
+  "modelProfile": "Copilot Studio Knowledge",
+  "allowedTools": [
+    "SharePoint REST API",
+    "Microsoft Graph Content Type API",
+    "Purview API",
+    "Term Store API"
+  ],
+  "identityType": "managed Entra ID identity",
+  "dataAccessScope": [
+    "metadata configuration",
+    "content type definitions",
+    "term store definitions"
+  ],
+  "securityConstraints": [
+    "No direct user-facing response generation",
+    "No changes to `Highly Confidential` content without approval"
+  ],
+  "evaluationThreshold": null
+}
